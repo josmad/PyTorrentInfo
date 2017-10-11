@@ -262,9 +262,9 @@ class TorrentParser:
             return string
 
 
-    def readFile(self, path):
+    def readFile(self, file):
 
-        self.file = open(path, "rb")
+        self.file = file
 
         # I think that there can't be multiple dictionaries at root level
         # Correct me if I'm wrong
@@ -301,3 +301,6 @@ class TorrentParser:
         dictionary["extra_data"] = extra
 
         return dictionary
+    
+    def readPath(self, path):
+        self.readFile(open(path, "rb"))
