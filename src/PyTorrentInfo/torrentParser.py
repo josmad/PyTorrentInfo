@@ -303,4 +303,4 @@ class TorrentParser:
         return dictionary
     
     def readPath(self, path):
-        self.readFile(open(path, "rb"))
+        return self.readFile(open(path, "rb"))
